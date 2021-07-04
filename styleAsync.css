@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1920px;
+  margin-top: 50px;
+}
+
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+#search {
+  font-size: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  position: absolute;
+  right: 370px;
+  width: 300px;
+  height: 30px;
+}
+#searchBtn {
+  position: absolute;
+  right: 370px;
+  border-radius: 3px;
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  width: 40px;
+  height: 32px;
+  font-size: 25px;
+}
+#imgArea {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 450px;
+  margin: 1em 0;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px brown;
+}
+#main {
+  width: 300px;
+  height: 300px;
+}
+
+#main:hover {
+  cursor: pointer;
+  padding-bottom: 25px;
+  width: 400px;
+  height: 350px;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+#heart {
+  width: 50px;
+  position: absolute;
+  top: 45px;
+  right: 18px;
+}
+
+#addlist {
+  width: 50px;
+  position: absolute;
+  top: 45px;
+  right: 75px;
+}
+#heart:hover,
+#addlist:hover {
+  cursor: pointer;
+  width: 60px;
+  transition: 0.3s;
+}
+
+.imgTitle {
+  font-size: 13px;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.imgSubtitle {
+  font-size: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  background-color: white;
+  color: grey;
+  opacity: 0.8;
+  font-style: italic;
+}
+#price {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+#sales {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#previewBtn {
+  width: 100px;
+  font-size: 18px;
+  background-color: white;
+  border: 3px solid grey;
+  border-radius: 5px;
+  padding: 5px 0px 5px 0px;
+  position: absolute;
+  bottom: 12px;
+  right: 90px;
+  font-weight: 600;
+}
+#previewBtn:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#cart {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+  border: 3px solid lightgreen;
+  border-radius: 5px;
+}
+#cart:hover {
+  background-color: green;
+  border-color: green;
+}
+
+@media (max-width: 400px) {
+  * {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .subs {
+    font-size: 0.8rem;
+  }
+  #header {
+    width: 400px;
+  }
+  #imgArea {
+    margin-top: 80px;
+  }
+  #imageContainer {
+    width: 20em;
+    height: 200px;
+    box-shadow: 0px 0px 0px white;
+    margin: 30px 10px 0 10px;
+  }
+  #main {
+    width: 50%;
+    height: 150px;
+  }
+  #main:hover {
+    width: 80%;
+    height: 200px;
+    padding-bottom: 30px;
+  }
+  #search {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    right: 145px;
+    top: 190px;
+  }
+  #searchBtn {
+    right: 115px;
+    top: 190px;
+    height: 40px;
+    font-size: 32px;
+  }
+  #heart {
+    top: 10px;
+    right: 5px;
+    width: 30px;
+  }
+  #addlist {
+    top: 10px;
+    right: 40px;
+    width: 30px;
+  }
+  #heart:hover,
+  #addlist:hover {
+    width: 35px;
+  }
+  .imgTitle {
+    font-size: 10px;
+    left: 2px;
+    bottom: 0px;
+  }
+  .imgSubtitle {
+    bottom: -10px;
+    left: 0px;
+    font-size: 8px;
+  }
+  #cart {
+    width: 30px;
+    height: 30px;
+    bottom: 15px;
+  }
+  #previewBtn {
+    font-size: 13px;
+    padding: 3px 10px 0px 12px;
+    width: 80px;
+    height: 30px;
+    right: 50px;
+    bottom: 15px;
+  }
+  #price {
+    font-size: 12px;
+  }
+  #sales {
+    flex-direction: row;
+    font-size: 12px;
+    top: 15px;
+  }
+}
+@media (min-width: 401px) and (max-width: 767px) {
+  * {
+    flex-direction: row;
+    max-width: 767px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .subs {
+    font-size: 1rem;
+  }
+  #header {
+    width: 400px;
+  }
+  #imgArea {
+    margin-top: 80px;
+  }
+  #imageContainer {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 0px 0px white;
+    margin: 30px 10px 0 10px;
+  }
+  #main {
+    width: 50%;
+    height: 150px;
+  }
+  #main:hover {
+    width: 80%;
+    height: 200px;
+    padding-bottom: 30px;
+  }
+  #search {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    right: 145px;
+    top: 160px;
+  }
+  #searchBtn {
+    right: 115px;
+    top: 160px;
+    height: 40px;
+    font-size: 32px;
+  }
+  #heart {
+    top: 10px;
+    right: 5px;
+    width: 30px;
+  }
+
+  #addlist {
+    top: 10px;
+    right: 40px;
+    width: 30px;
+  }
+  #heart:hover,
+  #addlist:hover {
+    width: 35px;
+  }
+  .imgTitle {
+    font-size: 10px;
+    left: 2px;
+    bottom: 0px;
+  }
+  .imgSubtitle {
+    bottom: -10px;
+    left: 0px;
+    font-size: 8px;
+  }
+  #cart {
+    width: 30px;
+    height: 30px;
+    bottom: 15px;
+  }
+  #previewBtn {
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+    width: 80px;
+    height: 30px;
+    right: 50px;
+    bottom: 1px;
+  }
+  #price {
+    font-size: 12px;
+  }
+  #sales {
+    flex-direction: row;
+    font-size: 12px;
+    top: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1220px) {
+  * {
+    flex-direction: row;
+    max-width: 1220px;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-right: 30px;
+  }
+  .subs {
+    font-size: 1.5rem;
+  }
+  #header {
+    width: 400px;
+  }
+  #imgArea {
+    margin-top: 120px;
+  }
+  #imageContainer {
+    width: 40%;
+    height: 200px;
+    box-shadow: 0px 0px 0px white;
+    margin: 30px 1em 0 1em;
+  }
+  #main {
+    width: 40%;
+    height: 150px;
+  }
+  #main:hover {
+    width: 50%;
+    height: 200px;
+    padding-bottom: 30px;
+  }
+  #search {
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    right: -70px;
+    top: 210px;
+  }
+  #searchBtn {
+    right: -70px;
+    top: 210px;
+    font-size: 70px;
+    height: 80px;
+    width: 10%;
+  }
+  #heart {
+    top: 10px;
+    right: 5px;
+    width: 30px;
+  }
+  #addlist {
+    top: 10px;
+    right: 40px;
+    width: 30px;
+  }
+  #heart:hover,
+  #addlist:hover {
+    width: 35px;
+  }
+  .imgTitle {
+    font-size: 14px;
+    left: 2px;
+    bottom: 10px;
+  }
+  .imgSubtitle {
+    bottom: 2px;
+    left: 0px;
+    font-size: 10px;
+  }
+  #cart {
+    width: 30px;
+    height: 30px;
+    bottom: 25px;
+  }
+  #previewBtn {
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+    width: 80px;
+    height: 30px;
+    right: 50px;
+    bottom: 25px;
+  }
+  #price {
+    font-size: 12px;
+  }
+  #sales {
+    flex-direction: row;
+    font-size: 12px;
+    top: 15px;
+  }
+}
